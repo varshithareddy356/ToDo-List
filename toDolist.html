@@ -1,0 +1,119 @@
+<html>
+    <head>    
+      <style>    
+        body{
+            background-image: url(https://www.timecamp.com/blog/wp-content/uploads/2021/07/to-dolist-templates-header.jpg);
+        }         
+     h1{
+        text-align: center;
+        
+       
+     }
+     #divv{
+        position: relative;
+        background-color: rgba(202, 45, 82, 0.89);
+    top: 5px;
+        width: 530px;
+        left: 270px;
+        height: 50px;
+        margin: 50px;
+        border-radius: 30px;
+     }
+     #first{
+        position: relative;
+        padding: 12px;
+        margin: 30px;
+        text-align: center;
+        background-color:rgba(163, 9, 86, 0.726);
+      
+        border: 2px solid rgb(70, 70, 129);
+      /*  height: 300px;*/
+        border-radius: 20px;
+        width: 500px;
+        left: 300px;
+     }
+     #input:focus{
+        outline: none;
+      border-color: rgba(7, 30, 119, 0.676);
+        
+     }
+     #btn{
+        width: 90px;
+        height: 30px;
+        position: relative;
+        left: 28px;
+        border-radius: 25px;
+
+
+     }
+     #input{
+        width: 300px;
+        height: 30px;
+        
+     }
+      </style>
+    </head>
+    <body>
+        <div id="divv">
+        <h1>To Do List</h1>
+    </div>
+        <div id="first">
+            <input type="text" id="input" placeholder="enter your text here">
+            <button id="btn">To Do</button>
+            <ul  id="ul" style="list-style-type: none;"><H2></H2></ul>
+        </div>
+     
+        <script>
+           
+            
+             let btn1=document.getElementById("btn");
+             btn1.addEventListener("click",()=>{
+           
+                let one=document.getElementById("ul");
+                let three=document.createElement("li");
+                three.innerHTML=input.value;
+                one.appendChild(three);
+                three.style.position="relative";
+                three.style.right="100px"; 
+                three.style.fontSize="20px";
+                let btn2=document.createElement("button");
+                btn2.style.position="relative";
+                btn2.style.width="80px";
+                btn2.style.height="30px";
+                btn2.style.borderRadius="25px";
+                btn2.style.left="140px"
+                btn2.style.borderColor="green";
+               btn2.style.color="green";
+                btn2.innerText="done";
+                three.appendChild(btn2);
+                btn2.addEventListener("click",()=>{
+                   three.style.textDecoration="underline"  
+                 });
+                let btn3=document.createElement("button");
+                btn3.innerText="Delete";
+               three.appendChild(btn3);
+               btn3.style.position="relative";
+               btn3.style.width="80px";
+               btn3.style.height="30px";
+               btn3.style.left="180px";
+               btn3.style.borderRadius="25px";
+               btn3.style.borderColor="red";
+               btn3.style.color="red";
+               btn3.addEventListener("click",()=>{
+                three.remove();
+               })
+              
+               
+                 var d=document.getElementById("input");
+                 d.value="";
+               
+
+             
+            })
+                
+
+
+            
+        </script>
+    </body>
+</html>
